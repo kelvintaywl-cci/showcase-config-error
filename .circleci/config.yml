@@ -9,7 +9,8 @@ experimental:
     branches:
       only:
         - main
-      ignore: /.*/
+      ignore:
+        - /.*/
       
 
 
