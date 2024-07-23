@@ -1,5 +1,10 @@
 version: 2.1
 
+experimental:
+  dummy:
+    foobar:
+      only: true
+
 executors:
   base:
     docker:
