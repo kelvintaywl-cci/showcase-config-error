@@ -1,0 +1,18 @@
+version: 2.1
+
+executors:
+  base:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+
+jobs:
+  echo:
+    executor: base
+    steps:
+      - run: echo hello
+
+workflows:
+  main:
+    jobs:
+      - echo
