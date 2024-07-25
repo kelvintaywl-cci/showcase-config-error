@@ -1,5 +1,19 @@
 version: 2.1
 
+# NOTE: it appears `experimental` is a legacy feature?
+# I see this discussed in a CircleCI Discuss post of 2016:
+# https://discuss.circleci.com/t/experimental-notification-hits-channel-for-build-cancellation/4214
+
+experimental:
+  notify:
+    branches:
+      only:
+        - main
+      ignore:
+        - /*/
+      
+
+
 executors:
   base:
     docker:
